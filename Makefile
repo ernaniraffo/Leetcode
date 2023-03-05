@@ -1,13 +1,16 @@
-EXEC = rtoi
+EXEC = multiplyStrings
 OBJ = $(EXEC).o
+
+CC = clang++
+CFLAGS = -std=c++17 -O2
 
 all: $(EXEC)
 
 $(EXEC) : $(OBJ)
-	clang++ -std=c++11 -o $@ $(OBJ)
+	$(CC) $(CFLAGS) -o $@ $(OBJ)
 
 %.o : %.cpp
-	clang++ -std=c++11 -c $<
+	$(CC) $(CFLAGS) -c $<
 
 clean : tidy
 	rm -rf $(EXEC)
