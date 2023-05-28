@@ -17,6 +17,7 @@ class WordNode:
             node = node.children[word[i]]
         return node.end
 
+
 class WordDictionary:
 
     def __init__(self):
