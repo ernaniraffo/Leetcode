@@ -20,10 +20,11 @@ class Solution:
             i += 1
 
         while i < len(s) and s[i].isdigit():
-            if res > INT_MAX // 10 or (res == INT_MAX // 10 and s[i] - '0' > 7):
+            digit = ord(s[i]) - ord('0')
+            if res > INT_MAX // 10 or (res == INT_MAX // 10 and digit > 7):
                 return INT_MAX if not negative else INT_MIN
-            res = (res * 10) + s[i] - '0'
+            res = res * 10 + digit
             i += 1
 
         return res if not negative else res * -1
-        
+
