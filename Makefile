@@ -1,4 +1,4 @@
-EXEC = multiplyStrings
+EXEC = ZeroEvenOdd
 OBJ = $(EXEC).o
 
 CC = clang++
