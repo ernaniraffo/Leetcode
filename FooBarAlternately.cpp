@@ -1,3 +1,6 @@
+#include <mutex>
+#include <functional>
+
 class FooBar {
 private:
     int n;
@@ -9,7 +12,7 @@ public:
         bar_mutex.lock();
     }
 
-    void foo(function<void()> printFoo) {
+    void foo(std::function<void()> printFoo) {
         
         for (int i = 0; i < n; i++) {
             foo_mutex.lock();
@@ -19,7 +22,7 @@ public:
         }
     }
 
-    void bar(function<void()> printBar) {
+    void bar(std::function<void()> printBar) {
         
         for (int i = 0; i < n; i++) {
             bar_mutex.lock();
