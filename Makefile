@@ -1,15 +1,15 @@
-EXEC = ZeroEvenOdd
+EXEC = buildingH2O
 OBJ = $(EXEC).o
 
-CC = clang++
-CFLAGS = -std=c++17 -O2
+CC = clang
+CFLAGS = -std=c11 -O1 -fsanitize=address -fno-omit-frame-pointer
 
 all: $(EXEC)
 
 $(EXEC) : $(OBJ)
 	$(CC) $(CFLAGS) -o $@ $(OBJ)
 
-%.o : %.cpp
+%.o : %.c
 	$(CC) $(CFLAGS) -c $<
 
 clean : tidy
