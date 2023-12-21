@@ -1,4 +1,4 @@
-EXEC = buildingH2O
+EXEC = merge
 OBJ = $(EXEC).o
 
 CC = clang
