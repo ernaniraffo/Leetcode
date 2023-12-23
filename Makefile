@@ -1,4 +1,4 @@
-EXEC = merge
+EXEC = removeDuplicatesII
 OBJ = $(EXEC).o
 
 CC = clang
