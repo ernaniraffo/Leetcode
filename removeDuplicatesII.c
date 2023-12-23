@@ -3,13 +3,13 @@ int removeDuplicates(int* nums, int numsSize) {
         return numsSize;
     }
 
-    int unique = 2;
-    for (int i = 2; i < numsSize; i += 1) {
-        if (nums[i] != nums[unique - 2]) {
-            nums[unique] = nums[i];
-            unique += 1;
+    int l = 2;
+    for (int r = 2; r < numsSize; r += 1) {
+        if (nums[r] != nums[l - 2]) {
+            nums[l] = nums[r];
+            l += 1;
         }
     }
 
-    return unique;
+    return l;
 }
