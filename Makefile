@@ -1,4 +1,4 @@
-EXEC = isPalindrome
+EXEC = validParentheses
 OBJ = $(EXEC).o
 
 CC = clang
