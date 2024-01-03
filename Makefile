@@ -1,8 +1,8 @@
-EXEC = validParentheses
+EXEC = addBinary
 OBJ = $(EXEC).o
 
 CC = clang
-CFLAGS = -std=c11 -O2 -fsanitize=address -fno-omit-frame-pointer
+CFLAGS = -std=c11 -O2
 
 all: $(EXEC)
 
