@@ -1,7 +1,8 @@
 class Solution {
-public:
+  public:
     int removeElement(vector<int>& nums, int val) {
-        if (nums.size() == 0) return 0;
+        if (nums.size() == 0)
+            return 0;
         int k = nums.size();
         for (int i = 0; i < nums.size(); i++) {
             if (nums[i] == val) {
@@ -18,5 +19,4 @@ public:
         }
         return k;
     }
-    
 };

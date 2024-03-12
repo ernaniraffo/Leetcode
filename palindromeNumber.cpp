@@ -6,8 +6,8 @@ bool isPalindrome(int x) {
     int reverse = 0;
     while (x > reverse) {
         reverse = reverse * 10 + x % 10;
-        x /= 10;    
+        x /= 10;
     }
 
-    return x == reverse or x == reverse/10;
+    return x == reverse or x == reverse / 10;
 }

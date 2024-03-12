@@ -9,7 +9,7 @@
  * };
  */
 class Solution {
-public:
+  public:
     ListNode* removeNthFromEnd(ListNode* head, int n) {
         if (head == nullptr or head->next == nullptr) {
             return nullptr;
@@ -30,9 +30,8 @@ public:
             slow = slow->next;
             fast = fast->next;
         }
-    
-        slow->next = slow->next->next;
 
+        slow->next = slow->next->next;
 
         return head;
     }

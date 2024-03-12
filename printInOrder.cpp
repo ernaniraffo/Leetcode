@@ -1,9 +1,10 @@
 class Foo {
-private:
+  private:
     int count;
     mutex m;
     condition_variable cv;
-public:
+
+  public:
     Foo() {
         count = 0;
     }

@@ -2,10 +2,10 @@
 
 struct ListNode {
     int val;
-    struct ListNode *next;
+    struct ListNode* next;
 };
 
-bool hasCycle(struct ListNode *head) {
+bool hasCycle(struct ListNode* head) {
     if (head) {
         struct ListNode* slow = head;
         struct ListNode* fast = head;

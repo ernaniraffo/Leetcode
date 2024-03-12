@@ -10,7 +10,7 @@
  * };
  */
 class Solution {
-public:
+  public:
     void inorderTraversal(TreeNode* root, vector<int>& inorderList) {
         if (root) {
             inorderTraversal(root->left, inorderList);
@@ -20,7 +20,7 @@ public:
     }
 
     int getMinimumDifference(TreeNode* root) {
-        vector<int> inorderList {};
+        vector<int> inorderList{};
 
         inorderTraversal(root, inorderList);
         int min_val = INT_MAX;

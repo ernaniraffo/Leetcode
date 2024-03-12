@@ -1,11 +1,11 @@
-#include <stdbool.h>
 #include <ctype.h>
+#include <stdbool.h>
 #include <stdio.h>
 
 bool isPalindrome(char* s) {
     int l = 0;
     int r = strlen(s) - 1;
-    
+
     while (l < r) {
         while (l < r && !isalnum(s[l])) {
             l++;
@@ -19,7 +19,7 @@ bool isPalindrome(char* s) {
         l++;
         r--;
     }
-    
+
     return true;
 }
 

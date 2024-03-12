@@ -13,11 +13,11 @@ ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
     ListNode* current = new ListNode();
     ListNode* result = current;
 
-    int carry {};
+    int carry{};
 
     while (l1 or l2 or carry) {
-        int sum {};
-        
+        int sum{};
+
         if (l1) {
             sum += l1->val;
             l1 = l1->next;
@@ -29,8 +29,8 @@ ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
 
         sum += carry;
         carry = (sum >= 10) ? 1 : 0;
-        
-        current->val = sum % 10; 
+
+        current->val = sum % 10;
         current->next = (l1 or l2 or carry) ? new ListNode() : nullptr;
         current = current->next;
     }

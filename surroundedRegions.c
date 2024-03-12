@@ -5,9 +5,9 @@ void dfs(char** board, int r, int c, int m, int n) {
     if (r < 0 || r >= m || c < 0 || c >= n || board[r][c] != 'O') {
         return;
     }
-    
+
     board[r][c] = '1';
-    
+
     dfs(board, r, c + 1, m, n);
     dfs(board, r, c - 1, m, n);
     dfs(board, r + 1, c, m, n);
@@ -34,7 +34,7 @@ void solve(char** board, int boardSize, int* boardColSize) {
                 board[r][c] = 'X';
             } else if (board[r][c] == '1') {
                 board[r][c] = 'O';
-            }   
+            }
         }
     }
 }

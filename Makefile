@@ -18,3 +18,5 @@ clean : tidy
 tidy:
 	rm -rf *.o
 
+format:
+	clang-format -style=file -i *.cpp *.c

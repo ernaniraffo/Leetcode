@@ -9,14 +9,14 @@
  * };
  */
 class Solution {
-public:
+  public:
     ListNode* oddEvenList(ListNode* head) {
         if (head == nullptr) {
             return head;
         }
 
         ListNode* evenStart = head->next;
-        
+
         ListNode* even = evenStart;
         ListNode* odd = head;
 

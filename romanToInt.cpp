@@ -6,19 +6,13 @@ using namespace std;
 int romanToInt(string s) {
     int sum = 0;
     map<char, int> values = {
-        {'I', 1},
-        {'V', 5},
-        {'X', 10},
-        {'L', 50},
-        {'C', 100},
-        {'D', 500},
-        {'M', 1000},
+        {'I', 1}, {'V', 5}, {'X', 10}, {'L', 50}, {'C', 100}, {'D', 500}, {'M', 1000},
     };
 
     for (auto it = s.begin(); it != s.end(); it++) {
         if (values[*(it + 1)] > values[*it]) {
             sum += values[*(it + 1)] - values[*it];
-            it++; 
+            it++;
         } else {
             sum += values[*it];
         }

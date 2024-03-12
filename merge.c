@@ -1,8 +1,8 @@
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
 
-#define MAX_START 3
+#define MAX_START     3
 #define MAX_INCREMENT 5
 
 void print_array(int* nums, int numsSize) {
@@ -16,7 +16,7 @@ void print_array(int* nums, int numsSize) {
 void merge(int* nums1, int nums1Size, int m, int* nums2, int nums2Size, int n) {
     int i = m - 1;
     int j = n - 1;
-    
+
     int k;
     for (k = nums1Size - 1; k >= 0; k -= 1) {
         if (i >= 0 && j >= 0 && nums1[i] > nums2[j]) {

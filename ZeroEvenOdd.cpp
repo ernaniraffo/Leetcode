@@ -1,7 +1,7 @@
+#include <functional>
+#include <iostream>
 #include <mutex>
 #include <thread>
-#include <iostream>
-#include <functional>
 
 using namespace std;
 
@@ -10,11 +10,11 @@ void printNumber(int n) {
 }
 
 class ZeroEvenOdd {
-private:
+  private:
     int n;
     mutex z, e, o;
 
-public:
+  public:
     ZeroEvenOdd(int n) {
         this->n = n;
         this->e.lock();
@@ -50,9 +50,8 @@ public:
     }
 };
 
-
 int main(int argc, char** argv) {
-    ZeroEvenOdd sol {5};
+    ZeroEvenOdd sol{5};
     std::thread zeros(&ZeroEvenOdd::zero, &sol, printNumber);
     std::thread odds(&ZeroEvenOdd::odd, &sol, printNumber);
     std::thread evens(&ZeroEvenOdd::even, &sol, printNumber);

@@ -1,5 +1,5 @@
 class Solution {
-public:
+  public:
     long long zeroFilledSubarray(vector<int>& nums) {
         long long consecutiveZeros = 0;
         long long totalSubarrays = 0;

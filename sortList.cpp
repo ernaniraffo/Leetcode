@@ -9,10 +9,9 @@
  * };
  */
 class Solution {
-public:
-
+  public:
     ListNode* mergeSort(ListNode* left, ListNode* right) {
-        ListNode dummy {};
+        ListNode dummy{};
         ListNode* curr = &dummy;
 
         while (left && right) {
@@ -47,7 +46,7 @@ public:
     }
 
     ListNode* split_and_getMid(ListNode* head) {
-        
+
         ListNode* slow = head;
         ListNode* fast = head;
 

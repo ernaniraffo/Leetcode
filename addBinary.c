@@ -1,25 +1,25 @@
 #include <math.h>
-#include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 char* addBinary(char* a, char* b) {
     int aP = strlen(a);
     int bP = strlen(b);
     int n = fmax(aP, bP);
-    
+
     char* ans_str = calloc(n + 2, sizeof(char)); // n + 2 for null char and possible carry
     ans_str[n + 1] = '\0';
     for (int i = 0; i <= n; i += 1) {
         ans_str[i] = '0';
     }
-    
+
     // decrement all lengths
     aP -= 1;
     bP -= 1;
-    
+
     int carry = 0;
-    
+
     while (aP >= 0 || bP >= 0 || n >= 0) {
         if (aP >= 0 && a[aP] == '1') {
             carry += 1;

@@ -1,4 +1,4 @@
-int lengthOfLastWord(char * s){
+int lengthOfLastWord(char* s) {
     int len = 0;
     bool matched = false;
     for (int c = strlen(s) - 1; c >= 0; c -= 1) {

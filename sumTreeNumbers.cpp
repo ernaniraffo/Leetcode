@@ -10,10 +10,10 @@
  * };
  */
 class Solution {
-public:
+  public:
     int sumNumbers(TreeNode* root) {
         int sum = 0;
-        return postOrderTraversal(root, sum); 
+        return postOrderTraversal(root, sum);
     }
 
     int postOrderTraversal(TreeNode* root, int sum) {

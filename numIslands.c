@@ -4,11 +4,15 @@ void dfs(char** grid, int r, int c, int m, int n) {
     }
 
     grid[r][c] = '0';
-    
-    if (c + 1 < n) dfs(grid, r, c + 1, m, n);
-    if (c - 1 >= 0) dfs(grid, r, c - 1, m, n);
-    if (r + 1 < m) dfs(grid, r + 1, c, m, n);
-    if (r - 1 >= 0) dfs(grid, r - 1, c, m, n);
+
+    if (c + 1 < n)
+        dfs(grid, r, c + 1, m, n);
+    if (c - 1 >= 0)
+        dfs(grid, r, c - 1, m, n);
+    if (r + 1 < m)
+        dfs(grid, r + 1, c, m, n);
+    if (r - 1 >= 0)
+        dfs(grid, r - 1, c, m, n);
 }
 
 int numIslands(char** grid, int gridSize, int* gridColSize) {

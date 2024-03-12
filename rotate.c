@@ -5,11 +5,11 @@ void rotate(int* nums, int numsSize, int k) {
         int prev = nums[curr];
         while (1) {
             int next = (curr + k) % numsSize;
-            
+
             int temp = nums[next];
             nums[next] = prev;
             prev = temp;
-            
+
             count += 1;
             curr = next;
 

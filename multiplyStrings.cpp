@@ -9,7 +9,7 @@ string multiply(string num1, string num2) {
     int m = num1.size();
     int n = num2.size();
 
-    vector<int> p (m+n);
+    vector<int> p(m + n);
 
     reverse(num1.begin(), num1.end());
     reverse(num2.begin(), num2.end());
@@ -37,7 +37,6 @@ string multiply(string num1, string num2) {
 
     return answer;
 }
-
 
 int main(int argc, char** argv) {
     string num1, num2;
