@@ -1,4 +1,5 @@
 class Solution:
+
     def search(self, nums: List[int], target: int) -> int:
         lo = 0
         hi = len(nums) - 1

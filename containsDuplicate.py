@@ -1,4 +1,5 @@
 class Solution:
+
     def containsDuplicate(self, nums: List[int]) -> bool:
         s = set()
         for n in nums:
@@ -6,4 +7,3 @@ class Solution:
                 return True
             s.add(n)
         return False
-

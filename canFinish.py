@@ -1,4 +1,5 @@
 class Solution:
+
     def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
         indegree = defaultdict(int)
         adj = defaultdict(list)
@@ -10,7 +11,7 @@ class Solution:
         for i in range(numCourses):
             if indegree[i] == 0:
                 q.append(i)
-                
+
         visited = 0
         while q:
             n = q.popleft()

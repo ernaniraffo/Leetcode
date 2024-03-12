@@ -2,6 +2,7 @@ from typing import List
 
 
 class Solution:
+
     def exist(self, board: List[List[str]], word: str) -> bool:
 
         m = len(board)
@@ -27,8 +28,9 @@ class Solution:
                     return True
         return False
 
+
 if __name__ == "__main__":
-    board = [["A","B","C","E"],["S","F","E","S"],["A","D","E","E"]]
+    board = [["A", "B", "C", "E"], ["S", "F", "E", "S"], ["A", "D", "E", "E"]]
     word = "ABCESEEDFE"
     s = Solution()
     print(s.exist(board, word))

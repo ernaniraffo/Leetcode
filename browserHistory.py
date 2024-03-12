@@ -4,7 +4,6 @@ class BrowserHistory:
         self.history = [homepage]
         self.site = 0
         self.top = 0
-        
 
     def visit(self, url: str) -> None:
         while self.site < self.top:
@@ -13,7 +12,6 @@ class BrowserHistory:
         self.history.append(url)
         self.site += 1
         self.top += 1
-        
 
     def back(self, steps: int) -> str:
         self.site -= steps

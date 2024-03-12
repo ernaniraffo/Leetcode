@@ -20,3 +20,4 @@ tidy:
 
 format:
 	clang-format -style=file -i *.cpp *.c
+	yapf -i *.py

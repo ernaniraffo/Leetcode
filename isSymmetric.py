@@ -5,9 +5,13 @@
 #         self.left = left
 #         self.right = right
 class Solution:
+
     def isSymmetric(self, root: Optional[TreeNode]) -> bool:
+
         def dfs(left, right):
             if not left and not right:
                 return True
-            return left.val == right.val and dfs(left.left, right.right) and dfs(left.right, right.left) if left and right else False
-        return dfs(root.left, root.right) 
+            return left.val == right.val and dfs(left.left, right.right) and dfs(
+                left.right, right.left) if left and right else False
+
+        return dfs(root.left, root.right)

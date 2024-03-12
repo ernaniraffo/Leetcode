@@ -5,6 +5,7 @@
 #         self.left = left
 #         self.right = right
 class Solution:
+
     def isCompleteTree(self, root: Optional[TreeNode]) -> bool:
         q = [root]
         lastNode = False

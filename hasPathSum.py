@@ -5,6 +5,7 @@
 #         self.left = left
 #         self.right = right
 class Solution:
+
     def isLeaf(self, node: TreeNode) -> bool:
         return not node.left and not node.right
 

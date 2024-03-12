@@ -1,4 +1,5 @@
 class Solution:
+
     def addBinary(self, a: str, b: str) -> str:
         carry = 0
         sumString = ""
@@ -7,9 +8,9 @@ class Solution:
         bP = len(b) - 1
 
         while aP >= 0 or bP >= 0 or carry:
-            
+
             res = carry
-            
+
             if aP >= 0:
                 res += int(a[aP])
                 aP -= 1

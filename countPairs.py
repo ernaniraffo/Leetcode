@@ -1,10 +1,11 @@
 class Solution:
+
     def countPairs(self, n: int, edges: List[List[int]]) -> int:
         adj = defaultdict(list)
         for a, b in edges:
             adj[a].append(b)
             adj[b].append(a)
-        
+
         pairs = 0
         componentSize = 0
         remainingNodes = n
@@ -23,5 +24,5 @@ class Solution:
                 componentSize = dfs(i, adj, visited)
                 remainingNodes -= componentSize
                 pairs += componentSize * remainingNodes
-                
+
         return pairs
