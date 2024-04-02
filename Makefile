@@ -1,8 +1,8 @@
-EXEC = addBinary
+EXEC = FizzBuzz
 OBJ = $(EXEC).o
 
 CC = clang
-CFLAGS = -std=c11 -O2
+CFLAGS = -std=c++20 -O2
 
 all: $(EXEC)
 
