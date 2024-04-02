@@ -9,7 +9,7 @@
  * };
  */
 class Solution {
-  public:
+public:
     ListNode* reverseList(ListNode* head) {
         ListNode* prev = nullptr;
         ListNode* curr = head;

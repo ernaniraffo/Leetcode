@@ -2,11 +2,11 @@
 #include <mutex>
 
 class FooBar {
-  private:
+private:
     int n;
     std::mutex foo_mutex, bar_mutex;
 
-  public:
+public:
     FooBar(int n) {
         this->n = n;
         bar_mutex.lock();

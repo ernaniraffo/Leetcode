@@ -9,7 +9,7 @@
  * };
  */
 class Solution {
-  public:
+public:
     ListNode* mergeSort(ListNode* left, ListNode* right) {
         ListNode dummy{};
         ListNode* curr = &dummy;

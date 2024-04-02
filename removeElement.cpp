@@ -1,5 +1,5 @@
 class Solution {
-  public:
+public:
     int removeElement(vector<int>& nums, int val) {
         if (nums.size() == 0)
             return 0;

@@ -9,7 +9,7 @@
  * };
  */
 class Solution {
-  public:
+public:
     ListNode* removeNthFromEnd(ListNode* head, int n) {
         if (head == nullptr or head->next == nullptr) {
             return nullptr;

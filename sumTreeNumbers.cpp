@@ -10,7 +10,7 @@
  * };
  */
 class Solution {
-  public:
+public:
     int sumNumbers(TreeNode* root) {
         int sum = 0;
         return postOrderTraversal(root, sum);

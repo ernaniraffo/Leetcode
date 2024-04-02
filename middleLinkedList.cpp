@@ -9,7 +9,7 @@
  * };
  */
 class Solution {
-  public:
+public:
     ListNode* middleNode(ListNode* head) {
         ListNode* slow = head;
         ListNode* fast = head;

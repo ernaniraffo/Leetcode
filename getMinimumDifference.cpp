@@ -10,7 +10,7 @@
  * };
  */
 class Solution {
-  public:
+public:
     void inorderTraversal(TreeNode* root, vector<int>& inorderList) {
         if (root) {
             inorderTraversal(root->left, inorderList);

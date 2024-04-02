@@ -9,7 +9,7 @@
  * };
  */
 class Solution {
-  public:
+public:
     bool isPalindrome(ListNode* head) {
         if (head->next == nullptr) {
             return true;

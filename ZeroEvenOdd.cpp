@@ -10,11 +10,11 @@ void printNumber(int n) {
 }
 
 class ZeroEvenOdd {
-  private:
+private:
     int n;
     mutex z, e, o;
 
-  public:
+public:
     ZeroEvenOdd(int n) {
         this->n = n;
         this->e.lock();
