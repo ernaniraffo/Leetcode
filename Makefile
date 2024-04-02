@@ -1,16 +1,13 @@
 EXEC = FizzBuzz
 OBJ = $(EXEC).o
 
-CC = clang
+CC = clang++
 CFLAGS = -std=c++20 -O2
 
 all: $(EXEC)
 
-$(EXEC) : $(OBJ)
-	$(CC) $(CFLAGS) -o $@ $(OBJ)
-
-%.o : %.c
-	$(CC) $(CFLAGS) -c $<
+$(EXEC) : $(EXEC).cpp
+	$(CC) $(CFLAGS) $^ -o $@
 
 clean : tidy
 	rm -rf $(EXEC)

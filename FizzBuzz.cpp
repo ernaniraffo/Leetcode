@@ -1,5 +1,7 @@
 #include <functional>
 #include <thread>
+#include <vector>
+#include <iostream>
 
 using namespace std;
 
@@ -62,3 +64,36 @@ public:
         }
     }
 };
+
+void printFizz() {
+    std::cout << "fizz" << std::endl;
+}
+
+void printBuzz() {
+    std::cout << "buzz" << std::endl;
+}
+
+void printFizzBuzz() {
+    std::cout << "fizzbuzz" << std::endl; 
+}
+
+void printNumber(int x) {
+    std::cout << x << std::endl;
+}
+
+int main(int argc, char** argv) {
+    int n = 15;
+    FizzBuzz f(n);
+
+    thread a(&FizzBuzz::buzz, &f, function<void()>(printBuzz));
+    thread b(&FizzBuzz::fizz, &f,  function<void()>(printFizz));
+    thread c(&FizzBuzz::fizzbuzz, &f, function<void()>(printFizzBuzz));
+    thread d(&FizzBuzz::number, &f, function<void(int)>(printNumber));
+
+    a.join();
+    b.join();
+    c.join();
+    d.join();
+
+    return 0;
+}
