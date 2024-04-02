@@ -83,6 +83,9 @@ void printNumber(int x) {
 
 int main(int argc, char** argv) {
     int n = 15;
+    if (argc > 1) {
+        n = stoi(argv[1], nullptr);
+    }
     FizzBuzz f(n);
 
     thread a(&FizzBuzz::buzz, &f, function<void()>(printBuzz));
