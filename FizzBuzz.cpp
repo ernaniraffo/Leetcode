@@ -1,14 +1,15 @@
 #include <functional>
 #include <thread>
-#include <vector>
 #include <iostream>
+#include <atomic>
+#include <mutex>
 
 using namespace std;
 
 class FizzBuzz {
 private:
     int n;
-    int i;
+    atomic<int> i;
 
     bool divisible(int x, int y) {
         return x % y == 0;
@@ -65,20 +66,30 @@ public:
     }
 };
 
+mutex print_mutex;
+
 void printFizz() {
+    print_mutex.lock();
     std::cout << "fizz" << std::endl;
+    print_mutex.unlock();
 }
 
 void printBuzz() {
+    print_mutex.lock();
     std::cout << "buzz" << std::endl;
+    print_mutex.unlock();
 }
 
 void printFizzBuzz() {
-    std::cout << "fizzbuzz" << std::endl; 
+    print_mutex.lock();
+    std::cout << "fizzbuzz" << std::endl;
+    print_mutex.unlock();
 }
 
 void printNumber(int x) {
+    print_mutex.lock();
     std::cout << x << std::endl;
+    print_mutex.unlock();
 }
 
 int main(int argc, char** argv) {
