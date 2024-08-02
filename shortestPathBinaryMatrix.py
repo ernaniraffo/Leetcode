@@ -1,4 +1,5 @@
 class Solution:
+
     def neighbors(self, i, j):
         up = (i - 1, j)
         down = (i + 1, j)
@@ -11,15 +12,15 @@ class Solution:
         return [up, down, left, right, up_left, up_right, down_left, down_right]
 
     def shortestPathBinaryMatrix(self, grid: List[List[int]]) -> int:
-        
+
         q = []
         visited = set()
         n, m = len(grid), len(grid[0])
-        
+
         if grid[0][0] == 0:
-            q.append((0,0,1))
-            visited.add((0,0))
-        
+            q.append((0, 0, 1))
+            visited.add((0, 0))
+
         while q:
             i, j, v = q.pop(0)
             if i == n - 1 and j == m - 1:

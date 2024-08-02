@@ -1,4 +1,5 @@
 class Solution:
+
     def minScore(self, n: int, roads: List[List[int]]) -> int:
         adj = defaultdict(list)
         for road in roads:
@@ -15,4 +16,3 @@ class Solution:
                     visited.add(node)
                     q.append(node)
         return score
-

@@ -1,8 +1,10 @@
 class TrieNode:
+
     def __init__(self):
         self.children = {}
         self.end = False
-    
+
+
 class Trie:
 
     def __init__(self):
@@ -15,7 +17,7 @@ class Trie:
                 node.children[c] = TrieNode()
             node = node.children[c]
         node.end = True
-        
+
     def search(self, word: str) -> bool:
         node = self.root
         for c in word:
@@ -31,7 +33,6 @@ class Trie:
                 return False
             node = node.children[c]
         return True
-        
 
 
 # Your Trie object will be instantiated and called as such:

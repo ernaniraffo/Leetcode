@@ -1,4 +1,5 @@
 class Solution:
+
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
         heap = []
 
@@ -8,7 +9,7 @@ class Solution:
                 freq[num] += 1
             else:
                 freq[num] = 1
-        
+
         for num in freq:
             heappush(heap, (freq[num], num))
             if len(heap) > k:

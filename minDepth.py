@@ -5,6 +5,7 @@
 #         self.left = left
 #         self.right = right
 class Solution:
+
     def minDepth(self, root: Optional[TreeNode]) -> int:
         if root:
             q = [(root, 1)]
@@ -13,7 +14,7 @@ class Solution:
                 if not n.left and not n.right:
                     return depth
                 if n.left:
-                    q.append((n.left, depth+1))
+                    q.append((n.left, depth + 1))
                 if n.right:
-                    q.append((n.right, depth+1))
+                    q.append((n.right, depth + 1))
         return 0

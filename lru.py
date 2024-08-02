@@ -1,4 +1,5 @@
 class Node:
+
     def __init__(self, key, value):
         self.key = key
         self.value = value
@@ -7,6 +8,7 @@ class Node:
 
 
 class List:
+
     def __init__(self):
         self.head = Node(0, 0)
         self.tail = Node(0, 0)

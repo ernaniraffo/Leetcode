@@ -1,8 +1,8 @@
-#include <functional>
-#include <thread>
-#include <iostream>
 #include <atomic>
+#include <functional>
+#include <iostream>
 #include <mutex>
+#include <thread>
 
 using namespace std;
 
@@ -100,7 +100,7 @@ int main(int argc, char** argv) {
     FizzBuzz f(n);
 
     thread a(&FizzBuzz::buzz, &f, function<void()>(printBuzz));
-    thread b(&FizzBuzz::fizz, &f,  function<void()>(printFizz));
+    thread b(&FizzBuzz::fizz, &f, function<void()>(printFizz));
     thread c(&FizzBuzz::fizzbuzz, &f, function<void()>(printFizzBuzz));
     thread d(&FizzBuzz::number, &f, function<void(int)>(printNumber));
 

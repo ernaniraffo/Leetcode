@@ -5,6 +5,7 @@
 #         self.left = left
 #         self.right = right
 class Solution:
+
     def maxLevelSum(self, root: Optional[TreeNode]) -> int:
 
         max_sum = dict()
@@ -18,5 +19,5 @@ class Solution:
                 q.append((n.left, level + 1))
             if n.right:
                 q.append((n.right, level + 1))
-        
+
         return max(max_sum, key=max_sum.get)

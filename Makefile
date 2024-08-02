@@ -6,14 +6,11 @@ CFLAGS = -std=c++20 -O2
 
 all: $(EXEC)
 
-$(EXEC) : $(EXEC).cpp
+$(EXEC): $(EXEC).cpp
 	$(CC) $(CFLAGS) $^ -o $@
 
-clean : tidy
-	rm -rf $(EXEC)
-
-tidy:
-	rm -rf *.o
+clean:
+	rm -rf $(EXEC) *.dSYM
 
 format:
 	clang-format -style=file -i *.cpp *.c

@@ -1,4 +1,5 @@
 class Solution:
+
     def tribonacci(self, n: int) -> int:
         max_n = 38
         F = [0] * max_n

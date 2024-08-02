@@ -1,4 +1,5 @@
 class Solution:
+
     def largestAltitude(self, gain: List[int]) -> int:
         curr_altitude = 0
         highest = 0

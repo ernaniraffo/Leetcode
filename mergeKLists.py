@@ -4,6 +4,7 @@
 #         self.val = val
 #         self.next = next
 class Solution:
+
     def merge(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
         dummy = ListNode()
         curr = dummy
@@ -16,14 +17,13 @@ class Solution:
                 curr.next = list2
                 list2 = list2.next
             curr = curr.next
-        
+
         if (list1):
             curr.next = list1
         elif (list2):
             curr.next = list2
 
         return dummy.next
-        
 
     def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
         num_lists = len(lists)

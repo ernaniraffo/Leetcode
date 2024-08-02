@@ -4,7 +4,7 @@ public:
         std::vector<int> memo(n + 1, 0);
         return climbStairs(0, n, memo);
     }
-    
+
     int climbStairs(int step, int n, std::vector<int>& memo) {
         if (step > n) {
             return 0;

@@ -1,4 +1,5 @@
 class Solution:
+
     def __init__(self):
         self.count = 0
 
@@ -17,4 +18,3 @@ class Solution:
 
         self.dfs(0, -1, adj)
         return self.count
-

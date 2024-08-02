@@ -1,4 +1,5 @@
 class Solution:
+
     def longestPalindrome(self, s: str) -> str:
         n = len(s)
         dp = [[False] * n for _ in range(n)]
@@ -18,6 +19,6 @@ class Solution:
                 if s[i] == s[j] and dp[i + 1][j - 1]:
                     dp[i][j] = True
                     ans = [i, j]
-        
+
         i, j = ans
-        return s[i: j + 1]
+        return s[i:j + 1]

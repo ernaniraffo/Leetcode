@@ -1,7 +1,9 @@
 from collections import deque, defaultdict
 from typing import List
 
+
 class Solution:
+
     def shortestPathAllKeys(self, grid: List[str]) -> int:
 
         m = len(grid)
@@ -39,13 +41,14 @@ class Solution:
                             visited.add(((di, dj), new_keys))
                             q.append(((di, dj), new_keys, steps + 1))
                         elif cell in locks and not (keys_obtained & (1 << (ord(cell) - ord('A')))):
-                                continue
+                            continue
                         elif ((di, dj), keys_obtained) not in visited:
                             visited.add(((di, dj), keys_obtained))
                             q.append(((di, dj), keys_obtained, steps + 1))
         return -1
 
+
 if __name__ == "__main__":
-    grid = [".#.b.","A.#aB","#d...","@.cC.","D...#"]
+    grid = [".#.b.", "A.#aB", "#d...", "@.cC.", "D...#"]
     s = Solution()
     print(s.shortestPathAllKeys(grid))

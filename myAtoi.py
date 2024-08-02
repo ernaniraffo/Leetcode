@@ -1,17 +1,18 @@
 class Solution:
+
     def myAtoi(self, s: str) -> int:
         res = 0
 
         INT_MAX = 2**31 - 1
         INT_MIN = -2**31
-        
+
         i = 0
         while i < len(s) and s[i] == ' ':
             i += 1
 
         if i >= len(s):
             return 0
-        
+
         negative = False
         if s[i] == '-':
             negative = True
@@ -27,4 +28,3 @@ class Solution:
             i += 1
 
         return res if not negative else res * -1
-

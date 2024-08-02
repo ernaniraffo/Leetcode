@@ -1,8 +1,9 @@
 class Solution:
+
     def makeConnected(self, n: int, connections: List[List[int]]) -> int:
         if (len(connections) < n - 1):
             return -1
-    
+
         adj = DefaultDict(list)
         for connection in connections:
             adj[connection[0]].append(connection[1])
